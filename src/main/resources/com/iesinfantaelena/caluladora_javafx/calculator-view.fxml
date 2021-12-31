@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="BOTTOM_RIGHT" minHeight="500.0" minWidth="400.0" prefHeight="600.0" prefWidth="450.0" spacing="20.0" styleClass="background" stylesheets="@calculator.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iesinfantaelena.caluladora_javafx.CalculatorController">
+
+  <children>
+    <ScrollPane fx:id="scrollPane">
+      <VBox  alignment="BOTTOM_LEFT" maxWidth="-Infinity" maxHeight="-Infinity" styleClass="background" >
+        <children>
+          <Label fx:id="history" text="" maxWidth="-Infinity"/>
+        </children>
+      </VBox>
+    </ScrollPane>
+
+      <Label fx:id="display" text="" />
+
+      <GridPane hgap="10.0" prefHeight="400.0" prefWidth="450.0" stylesheets="@calculator.css" vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints percentWidth="25.0" />
+          <ColumnConstraints percentWidth="25.0" />
+          <ColumnConstraints percentWidth="25.0" />
+          <ColumnConstraints percentWidth="25.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints percentHeight="20.0" />
+          <RowConstraints percentHeight="20.0" />
+          <RowConstraints percentHeight="20.0" />
+          <RowConstraints percentHeight="20.0" />
+          <RowConstraints percentHeight="20.0" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="clean" onAction="#pintarPantalla" styleClass="otherButton" text="AC" />
+            <Button fx:id="n7" onAction="#pintarPantalla" styleClass="numberButton" text="7" GridPane.rowIndex="1" />
+            <Button fx:id="n4" onAction="#pintarPantalla" styleClass="numberButton" text="4" GridPane.rowIndex="2" />
+            <Button fx:id="n1" onAction="#pintarPantalla" styleClass="numberButton" text="1" GridPane.rowIndex="3" />
+            <Button fx:id="n0" onAction="#pintarPantalla" prefHeight="21.0" prefWidth="134.0" styleClass="numberButton" text="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button fx:id="leftParenthesis" onAction="#pintarPantalla" styleClass="otherButton" text="(" GridPane.columnIndex="1" />
+            <Button fx:id="n8" onAction="#pintarPantalla" styleClass="numberButton" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="n5" onAction="#pintarPantalla" styleClass="numberButton" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="n2" onAction="#pintarPantalla" styleClass="numberButton" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="rightParenthesis" onAction="#pintarPantalla" styleClass="otherButton" text=")" GridPane.columnIndex="2" />
+            <Button fx:id="n9" onAction="#pintarPantalla" styleClass="numberButton" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="n6" onAction="#pintarPantalla" styleClass="numberButton" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="n3" onAction="#pintarPantalla" styleClass="numberButton" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="division" onAction="#pintarPantalla" styleClass="operationButton" text="÷" GridPane.columnIndex="3" />
+            <Button fx:id="multiplication" onAction="#pintarPantalla" styleClass="operationButton" text="×" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="subtraction" onAction="#pintarPantalla" styleClass="operationButton" text="−" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="sum" onAction="#pintarPantalla" styleClass="operationButton" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="result" onAction="#pintarPantalla" styleClass="otherButton" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button fx:id="dot" onAction="#pintarPantalla" styleClass="numberButton" text="." GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

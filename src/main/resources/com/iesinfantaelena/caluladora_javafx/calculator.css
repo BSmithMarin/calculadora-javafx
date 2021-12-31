@@ -1,0 +1,52 @@
+.background {
+    -fx-background-color: #29262B;
+}
+/*Scroll pane*/
+ScrollPane{
+    -fx-hbar-policy: never;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport  { -fx-background-color: transparent; }
+/*Display*/
+
+#display{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: xx-large;
+}
+
+#history{
+    -fx-text-fill: #ADADAD;
+    -fx-font-size: x-large;
+    -fx-text-alignment: left;
+}
+
+/*Botones*/
+
+Button{
+    -fx-background-color: #3D3A50;
+    -fx-font-size: x-large;
+    -fx-max-height: infinity;
+    -fx-max-width: infinity;
+    -fx-background-radius: 15;
+}
+
+.operationButton{
+    -fx-text-fill: #FF004D;
+    -fx-font-size: xx-large;
+}
+
+.numberButton{
+    -fx-text-fill: #FFFFFF;
+}
+
+Button:hover{
+    -fx-background-color: #000000;
+}
+
+.otherButton{
+    -fx-text-fill: #16A085;
+}
+#result{
+    -fx-font-size: xx-large;
+}

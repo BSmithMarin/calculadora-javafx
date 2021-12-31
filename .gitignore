@@ -1,0 +1,11 @@
+
+# User-specific stuff
+.idea/
+**/*.iml
+
+# IntelliJ
+out/
+
+#Maven
+target/
+
